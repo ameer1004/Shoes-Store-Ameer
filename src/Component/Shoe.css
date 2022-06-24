@@ -1,0 +1,93 @@
+* {
+    background-color: black;
+    margin: 0;
+  }
+  .container {
+    display: flex;
+    margin-top: 10px;
+  }
+  h1 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+    margin-top: 5px;
+    animation-name: headers;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes headers {
+    0% {
+      color: gold;
+    }
+    50% {
+      color: red;
+    }
+    100% {
+      left: white;
+    }
+  }
+  
+  h2 {
+    color: gold;
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+  ul {
+    color: white;
+    font-size: 15px;
+    list-style-type: none;
+  }
+  li {
+    padding: 10px;
+  }
+  strong {
+    color: gold;
+  }
+  
+  .shoe {
+    margin-left: 25px;
+  }
+  .shoe {
+    width: 200px;
+    height: 170px;
+    margin-bottom: 30px;
+  }
+  
+  .ClockTime {
+    color: gold;
+    font-size: 35px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .Footer {
+    font-size: 20px;
+    font-weight: bolder;
+    background-color: gray;
+    height: 30px;
+    color: black;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    animation-name: footer;
+    animation-timing-function: linear;
+    animation-direction: alternate-reverse;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+  @keyframes footer {
+    0% {
+      background-color: gold;
+    }
+    50% {
+      background-color: red;
+    }
+    100% {
+      background-left: white;
+    }
+    
+  }
+  
