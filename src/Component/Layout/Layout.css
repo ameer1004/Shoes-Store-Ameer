@@ -1,14 +1,14 @@
-.container1 {
-  display: flex;
-  margin-top: 2px;
-  margin-bottom: 120px;
+* {
+  background-color: black;
+  margin: 0;
 }
+
 h1 {
-  font-size: 20px;
+  font-size: 40px;
   text-align: center;
   color: white;
-  margin-bottom: 20px;
-  margin-top: 2px;
+  margin-bottom: 25px;
+  margin-top: 5px;
   animation-name: headers;
   animation-timing-function: linear;
   animation-direction: alternate-reverse;
@@ -29,17 +29,12 @@ h1 {
 
 h2 {
   color: gold;
-  margin-left: 10px;
+  margin-left: 40px;
   margin-bottom: 20px;
-}
-h3 {
-  font-size: 20px;
-  color: purple;
-  text-align: center;
 }
 ul {
   color: white;
-  font-size: 10px;
+  font-size: 15px;
   list-style-type: none;
 }
 li {
@@ -49,14 +44,17 @@ strong {
   color: gold;
 }
 
-.Img {
-  width: 140px;
-  height: 100px;
-  margin-left: 30px;
+.shoe {
+  margin-left: 25px;
+}
+.shoe {
+  width: 200px;
+  height: 170px;
+  margin-bottom: 30px;
 }
 
 .Footer {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: bolder;
   background-color: gray;
   height: 30px;
@@ -82,19 +80,9 @@ strong {
     background-left: white;
   }
 }
-.Addcart {
-  background-color: red;
-  margin-left: 50px;
-}
 
-.btn {
-  height: 8%;
-  background-color: purple;
-  border-radius: 50%;
-  position: absolute;
-  left: 65%;
-}
-.table-formshoes {
-  display: grid;
-  place-items: center;
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
 }

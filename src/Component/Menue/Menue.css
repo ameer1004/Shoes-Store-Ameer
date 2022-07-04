@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+.dropbtn {
+  background-color: purple;
+  color: white;
+  padding: 16px;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  font-size: 15px;
+  position: absolute;
+  min-width: 140px;
+  z-index: 1;
+}
+
+.link {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: gold;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: gold;
+}
+
+.Carticon {
+  color: blue;
+  display: flex;
+  margin-top: 10px;
+}
