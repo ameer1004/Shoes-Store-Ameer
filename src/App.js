@@ -3,14 +3,18 @@ import Shoes from "./Component/Shoe";
 import ClockTime from "./Component/Time";
 import "./Component/Shoe.css";
 
-function App({ products, addToCart,shoesss }) {
+function App({ products, addToCart, setProducts }) {
   //Parent
 
   return (
     <div>
       <ClockTime />
 
-      <Shoes products={products} addToCart={addToCart} shoesss={shoesss} />
+      <Shoes
+        setProducts={setProducts}
+        products={products}
+        addToCart={addToCart}
+      />
     </div>
   );
 }

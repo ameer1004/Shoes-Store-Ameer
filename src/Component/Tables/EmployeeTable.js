@@ -12,7 +12,7 @@ function TableData({ employees }) {
         <td>{employee.city}</td>
         <td>{employee.birthdate}</td>
         <td>
-          <img src={employee.image} height="30px" />
+          <img src={employee.image} height="30px" alt="employee" />
         </td>
       </tr>
     );

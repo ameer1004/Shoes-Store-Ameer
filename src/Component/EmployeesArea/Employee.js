@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 import "./Employee.css";
+let arr = [];
+if (localStorage.getItem("EmployeesData")) {
+  arr = JSON.parse(localStorage.getItem("EmployeesData"));
+} else {
+  arr = [];
+}
 
 function Employees({ setEmployees }) {
   const [fname, setFname] = useState("");
@@ -32,7 +38,6 @@ function Employees({ setEmployees }) {
     setImage(event.target.value);
   };
   const transferValue = (event) => {
-    console.log("submit");
     event.preventDefault();
     const employee = {
       fname,
@@ -43,6 +48,8 @@ function Employees({ setEmployees }) {
       birthdate,
       image,
     };
+    arr.push(employee);
+    localStorage.setItem("EmployeesData", JSON.stringify(arr));
     const result = validateform(employee);
     console.log(employee);
     if (result) {
@@ -67,118 +74,116 @@ function Employees({ setEmployees }) {
       <div>
         <form>
           <table>
-            <tr>
-              <td>
-                <label>First Name:</label>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="fname"
-                  name="fname"
-                  value={fname}
-                  onChange={changeFname}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>Last Name:</label>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="lname"
-                  name="lname"
-                  value={lname}
-                  onChange={changeLname}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>Title:</label>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  name="title"
-                  value={title}
-                  id="title"
-                  onChange={changeTitle}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>Country:</label>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="country"
-                  name="country"
-                  value={country}
-                  onChange={changeCountry}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>City:</label>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  id="city"
-                  name="city"
-                  value={city}
-                  onChange={changeCity}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>Birth Date:</label>
-              </td>
-              <td>
-                <input
-                  type="date"
-                  id="date"
-                  name="date"
-                  value={birthdate}
-                  onChange={changeBirthdate}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>Add you image</label>
-              </td>
-              <td>
-                {" "}
-                <input
-                  type="text"
-                  name="img"
-                  id="img"
-                  onChange={changeImage}
-                  value={image}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                {" "}
-                <input
-                  type="button"
-                  value="Add"
-                  id="Addworkers"
-                  className="btnform"
-                  onClick={transferValue}
-                />
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>
+                  <label>First Name:</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    value={fname}
+                    onChange={changeFname}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Last Name:</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    value={lname}
+                    onChange={changeLname}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Title:</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="title"
+                    value={title}
+                    id="title"
+                    onChange={changeTitle}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Country:</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="country"
+                    name="country"
+                    value={country}
+                    onChange={changeCountry}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>City:</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    value={city}
+                    onChange={changeCity}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Birth Date:</label>
+                </td>
+                <td>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    value={birthdate}
+                    onChange={changeBirthdate}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Add you image</label>
+                </td>
+                <td>
+                  {" "}
+                  <input
+                    type="text"
+                    name="img"
+                    id="img"
+                    onChange={changeImage}
+                    value={image}
+                  />
+                </td>
+              </tr>
+            </tbody>
           </table>
+          <button
+            value="Add"
+            id="Addworkers"
+            className="btnform"
+            onClick={transferValue}
+          >
+            Add
+          </button>
         </form>
       </div>
     </div>

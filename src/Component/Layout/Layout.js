@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import Menue from "../Menue/Menue";
 import Routing from "../Routes/Route";
@@ -11,11 +10,13 @@ import Reebok from "../../assets/images/reebok.jfif";
 import Tommy from "../../assets/images/tommy.jpg";
 import Filla from "../../assets/images/FILLA.jpeg";
 
-function Layout() {
-  const [employees, setEmployees] = useState([]);
-  const [shoesss, setShoes] = useState([]);
-  const [cart, setCart] = useState([]);
-  const [products, setProducts] = useState([
+const getDefaultProducts = () => {
+  const storage = localStorage.getItem("products");
+  if (storage) {
+    return JSON.parse(storage);
+  }
+
+  return [
     { name: "Adidas", size: "32-47", price: "80$", imgUrl: ADIDAS },
     {
       name: "NIKE",
@@ -41,7 +42,21 @@ function Layout() {
       price: "65$",
       imgUrl: Filla,
     },
-  ]);
+  ];
+};
+
+function Layout() {
+  const [employees, setEmployees] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [products, setProductsOriginal] = useState(getDefaultProducts());
+
+  const setProducts = (cb) => {
+    setProductsOriginal((prevProducts) => {
+      const newState = cb(prevProducts);
+      localStorage.setItem("products", JSON.stringify(newState));
+      return newState;
+    });
+  };
 
   const addToCart = (product) => {
     setCart((prevCart) => [...prevCart, product]);
@@ -65,14 +80,8 @@ function Layout() {
           setProducts={setProducts}
           addToCart={addToCart}
           cart={cart}
-          shoesss={shoesss}
-          setShoes={setShoes}
         />
       </main>
-
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }

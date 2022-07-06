@@ -1,7 +1,10 @@
+.parentcontainer {
+  margin: 0;
+}
 .container1 {
   display: flex;
-  margin-top: 2px;
-  margin-bottom: 120px;
+  margin-bottom: 140px;
+  flex-wrap: wrap;
 }
 h1 {
   font-size: 20px;
@@ -27,9 +30,9 @@ h1 {
   }
 }
 
-h2 {
+.h2title {
   color: gold;
-  margin-left: 10px;
+  margin-left: 2px;
   margin-bottom: 20px;
 }
 h3 {
@@ -50,49 +53,24 @@ strong {
 }
 
 .Img {
-  width: 140px;
-  height: 100px;
+  width: 120px;
+  height: 80px;
   margin-left: 30px;
 }
 
-.Footer {
-  font-size: 20px;
-  font-weight: bolder;
-  background-color: gray;
-  height: 30px;
-  color: black;
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  text-align: center;
-  animation-name: footer;
-  animation-timing-function: linear;
-  animation-direction: alternate-reverse;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-@keyframes footer {
-  0% {
-    background-color: gold;
-  }
-  50% {
-    background-color: red;
-  }
-  100% {
-    background-left: white;
-  }
-}
 .Addcart {
   background-color: red;
   margin-left: 50px;
+  margin-bottom: 100px;
 }
 
 .btn {
-  height: 8%;
+  height: 30px;
   background-color: purple;
   border-radius: 50%;
-  position: absolute;
+  position: relative;
   left: 65%;
+  bottom: 40px;
 }
 .table-formshoes {
   display: grid;

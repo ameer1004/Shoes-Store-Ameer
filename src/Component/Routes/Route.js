@@ -11,8 +11,7 @@ function Routing({
   products,
   addToCart,
   cart,
-  shoesss,
-  setShoes,
+  setProducts,
 }) {
   return useRoutes([
     {
@@ -23,10 +22,9 @@ function Routing({
       path: "/app",
       element: (
         <App
+          setProducts={setProducts}
           products={products}
           addToCart={addToCart}
-          setShoes={setShoes}
-          shoesss={shoesss}
         />
       ),
     },

@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import Footer from "./Footer/Footer";
 
-function Shoes({ products, addToCart, setShoes }) {
+function Shoes({ products, addToCart, setProducts }) {
   const [shoesname, setShoesname] = useState("");
   const [shoesize, setShoessize] = useState("");
   const [shoesprice, setShoesprice] = useState("");
@@ -18,20 +19,20 @@ function Shoes({ products, addToCart, setShoes }) {
   const changeShoesimage = (event) => {
     setShoesimage(event.target.value);
   };
-  const transferValue = (event) => {
-    console.log("submit");
+  const addProduct = (event) => {
     event.preventDefault();
-    const shoees = {
-      shoesname,
-      shoesize,
-      shoesprice,
-      shoesimage,
+    const newProduct = {
+      name: shoesname,
+      size: shoesize,
+      price: shoesprice,
+      imgUrl: shoesimage,
     };
-    const result = validateform(shoees);
-    console.log(shoees);
-    if (result) {
-      setShoes((prevshoees) => [...prevshoees, shoees]);
-      clearState(shoees);
+
+    const Result = Validateform(newProduct);
+    console.log(newProduct);
+    if (Result) {
+      setProducts((prevProduct) => [...prevProduct, newProduct]);
+      clearState(newProduct);
     }
   };
   const clearState = () => {
@@ -46,8 +47,8 @@ function Shoes({ products, addToCart, setShoes }) {
         {products.map((shoe, i) => {
           return (
             <div key={i} className="shoe">
-              <h2>{shoe.name}</h2>
-              <img src={shoe.imgUrl} className="Img" alt="Adidas Shoe" />
+              <h2 className="h2title">{shoe.name}</h2>
+              <img src={shoe.imgUrl} className="Img" alt=" Shoe" />
               <ul>
                 <li>
                   <strong>Shoes Brand:</strong> {shoe.name}
@@ -66,83 +67,88 @@ function Shoes({ products, addToCart, setShoes }) {
           );
         })}
       </div>
-      return (
+
       <div className="formcontainer">
         <h3>Form: Add Shoes Product</h3>
 
         <form>
           <table className="table-formshoes">
-            <tr>
-              <td>
-                <label>Shoes Brand:</label>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  onChange={changeShoesname}
-                  value={shoesname}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>Shoes Size:</label>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  onChange={changeShoessize}
-                  value={shoesize}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>Shoes Price:</label>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  onChange={changeShoesprice}
-                  value={shoesprice}
-                />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <label>Shoes Image:</label>
-              </td>
-              <td>
-                <input
-                  type="text"
-                  onChange={changeShoesimage}
-                  vlaue={shoesimage}
-                />
-              </td>
-            </tr>
-            <button className="btn" onClick={transferValue}>
-              Add Shoes Products
-            </button>
+            <tbody>
+              <tr>
+                <td>
+                  <label>Shoes Brand:</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    onChange={changeShoesname}
+                    value={shoesname}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Shoes Size:</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    onChange={changeShoessize}
+                    value={shoesize}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Shoes Price:</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    onChange={changeShoesprice}
+                    value={shoesprice}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label>Shoes Image:</label>
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    onChange={changeShoesimage}
+                    value={shoesimage}
+                  />
+                </td>
+              </tr>
+            </tbody>
           </table>
+          <button className="btn" onClick={addProduct}>
+            Add Shoes Products
+          </button>
         </form>
       </div>
-      );
+      <Footer />
     </div>
   );
 }
-function validateform(shoees) {
-  const validFirstName = Validateshoesname(shoees.shoesname);
-  if (!validFirstName) {
+function Validateform(shoees) {
+  console.log(shoees);
+  const validShoestName = Validateshoesname(shoees.name);
+  if (!validShoestName) {
     return false;
   }
-  const validLastName = Validateshoessize(shoees.shoesize);
-  if (!validLastName) {
+  const validShoestSize = Validateshoessize(shoees.size);
+  if (!validShoestSize) {
     return false;
   }
-  const validTitle = Validateshoesprice(shoees.shoesprice);
-  if (!validTitle) {
+  const validShoesPrice = Validateshoesprice(shoees.price);
+  if (!validShoesPrice) {
     return false;
   }
+
+  return true;
 }
 function Validateshoesname(shoesname) {
   if (String(shoesname).length >= 3 && String(shoesname).length <= 8) {
