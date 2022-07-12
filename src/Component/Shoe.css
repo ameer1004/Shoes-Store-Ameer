@@ -1,93 +1,78 @@
-* {
-    background-color: black;
-    margin: 0;
-  }
-  .container {
-    display: flex;
-    margin-top: 10px;
-  }
-  h1 {
-    font-size: 40px;
-    text-align: center;
-    color: white;
-    margin-bottom: 25px;
-    margin-top: 5px;
-    animation-name: headers;
-    animation-timing-function: linear;
-    animation-direction: alternate-reverse;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes headers {
-    0% {
-      color: gold;
-    }
-    50% {
-      color: red;
-    }
-    100% {
-      left: white;
-    }
-  }
-  
-  h2 {
-    color: gold;
-    margin-left: 40px;
-    margin-bottom: 20px;
-  }
-  ul {
-    color: white;
-    font-size: 15px;
-    list-style-type: none;
-  }
-  li {
-    padding: 10px;
-  }
-  strong {
+.parentcontainer {
+  margin: 0;
+}
+.container1 {
+  display: flex;
+  margin-bottom: 140px;
+  flex-wrap: wrap;
+}
+h1 {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  margin-top: 2px;
+  animation-name: headers;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes headers {
+  0% {
     color: gold;
   }
-  
-  .shoe {
-    margin-left: 25px;
+  50% {
+    color: red;
   }
-  .shoe {
-    width: 200px;
-    height: 170px;
-    margin-bottom: 30px;
+  100% {
+    left: white;
   }
-  
-  .ClockTime {
-    color: gold;
-    font-size: 35px;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-  .Footer {
-    font-size: 20px;
-    font-weight: bolder;
-    background-color: gray;
-    height: 30px;
-    color: black;
-    width: 100%;
-    position: absolute;
-    bottom: 0px;
-    text-align: center;
-    animation-name: footer;
-    animation-timing-function: linear;
-    animation-direction: alternate-reverse;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-  }
-  @keyframes footer {
-    0% {
-      background-color: gold;
-    }
-    50% {
-      background-color: red;
-    }
-    100% {
-      background-left: white;
-    }
-    
-  }
-  
+}
+
+.h2title {
+  color: gold;
+  margin-left: 2px;
+  margin-bottom: 20px;
+}
+h3 {
+  font-size: 20px;
+  color: purple;
+  text-align: center;
+}
+ul {
+  color: white;
+  font-size: 10px;
+  list-style-type: none;
+}
+li {
+  padding: 10px;
+}
+strong {
+  color: gold;
+}
+
+.Img {
+  width: 120px;
+  height: 80px;
+  margin-left: 30px;
+}
+
+.Addcart {
+  background-color: red;
+  margin-left: 50px;
+  margin-bottom: 100px;
+}
+
+.btn {
+  height: 30px;
+  background-color: purple;
+  border-radius: 50%;
+  position: relative;
+  left: 65%;
+  bottom: 40px;
+}
+.table-formshoes {
+  display: grid;
+  place-items: center;
+}

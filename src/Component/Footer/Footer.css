@@ -1,0 +1,25 @@
+.Footer {
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: gray;
+  height: 30px;
+  color: black;
+  width: 100%;
+  text-align: center;
+  animation-name: footer;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes footer {
+  0% {
+    background-color: gold;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-left: white;
+  }
+}

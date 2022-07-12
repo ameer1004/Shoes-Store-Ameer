@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import "./Time.css"
+
 
 function ClockTime() {
   const [Time, setTime] = useState();
@@ -16,4 +18,4 @@ function ClockTime() {
     </div>
   );
 }
-export default ClockTime;
+export default ClockTime

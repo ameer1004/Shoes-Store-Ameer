@@ -1,0 +1,17 @@
+.table-container1 th {
+  border: 1px solid white;
+  border-collapse: collapse;
+  color: gold;
+  padding: 7px;
+}
+.table-container1 td {
+  border: 1px solid white;
+  border-collapse: collapse;
+  color: white;
+  padding: 20px;
+}
+.table-container1 {
+  text-align: center;
+  position: relative;
+  left: 30%;
+}

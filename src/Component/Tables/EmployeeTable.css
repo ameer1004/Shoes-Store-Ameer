@@ -1,0 +1,22 @@
+.employee-row {
+  color: white;
+}
+
+.table-container {
+  display: grid;
+  place-items: center;
+}
+
+.table-container th {
+  color: gold;
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+.table-container td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 7px;
+}
