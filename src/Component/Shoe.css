@@ -2,10 +2,12 @@
   margin: 0;
 }
 .container1 {
+  height: 700px;
   display: flex;
   margin-bottom: 140px;
   flex-wrap: wrap;
 }
+
 h1 {
   font-size: 20px;
   text-align: center;
