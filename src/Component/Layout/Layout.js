@@ -3,7 +3,6 @@ import Header from "../Header/Header";
 import Menue from "../Menue/Menue";
 import Routing from "../Routes/Route";
 import "./Layout.css";
-import ClockTime from "../Time";
 import ADIDAS from "../../assets/images/adidas.jpg";
 import Nike from "../../assets/images/Nike.jpg";
 import Reebok from "../../assets/images/reebok.jfif";
@@ -68,9 +67,6 @@ function Layout() {
         <Menue cart={cart} />
         <Header />
       </header>
-      <div>
-        <ClockTime />
-      </div>
 
       <main>
         <Routing

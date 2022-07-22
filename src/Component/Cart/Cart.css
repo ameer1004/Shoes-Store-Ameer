@@ -1,17 +1,22 @@
-.table-container1 th {
-  border: 1px solid white;
-  border-collapse: collapse;
-  color: gold;
-  padding: 7px;
-}
-.table-container1 td {
-  border: 1px solid white;
-  border-collapse: collapse;
+.shoes-row {
   color: white;
-  padding: 20px;
 }
-.table-container1 {
-  text-align: center;
-  position: relative;
-  left: 30%;
+
+.table-container {
+  display: grid;
+  place-items: center;
+}
+
+.table-container th {
+  color: gold;
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+.table-container td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: 7px;
 }
