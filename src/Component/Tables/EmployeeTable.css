@@ -20,3 +20,8 @@ td,
 th {
   padding: 7px;
 }
+@media screen and (max-width: 412px) {
+  .table-container th {
+    font-size: 10px;
+  }
+}
