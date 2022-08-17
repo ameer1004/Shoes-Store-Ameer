@@ -78,7 +78,7 @@ strong {
     margin-bottom: 140px;
   }
 }
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 465px) {
   .container1 {
     font-size: 5px;
     height: 1500px;
