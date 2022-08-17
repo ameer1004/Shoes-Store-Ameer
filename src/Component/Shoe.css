@@ -78,10 +78,10 @@ strong {
     margin-bottom: 140px;
   }
 }
-@media screen and (max-width: 466px) {
+@media screen and (max-width: 414px) {
   .container1 {
     font-size: 5px;
-    height: 1400px;
+    height: 1500px;
     display: flex;
     margin-bottom: 140px;
   }
@@ -161,5 +161,10 @@ strong {
   }
   .formcontainer h3 {
     margin-left: -10%;
+  }
+}
+@media screen and (max-width: 280px) {
+  .table-formshoes td input {
+    width: 80px;
   }
 }
