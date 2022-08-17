@@ -1,7 +1,11 @@
 .ClockTime {
   color: gold;
-  font-size: 20px;
-  position: absolute;
-  right: 20%;
-  top: 5px;
+  font-size: 90px;
+  left: 15%;
+}
+@media screen and (max-width: 440px) {
+  .ClockTime {
+    font-size: 20px;
+    top: 5px;
+  }
 }

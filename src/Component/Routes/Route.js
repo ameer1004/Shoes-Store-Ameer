@@ -4,7 +4,7 @@ import Employees from "../EmployeesArea/Employee.js";
 import Home from "../HomeArea/Home";
 import Cart from "../Cart/Cart";
 import App from "../../App";
-import EmployeeTable from "../Tables/EmployeeTable";
+import TableData from "../Tables/EmployeeTable";
 function Routing({
   setEmployees,
   employees,
@@ -35,7 +35,7 @@ function Routing({
 
     {
       path: "/employee-table",
-      element: <EmployeeTable employees={employees} />,
+      element: <TableData employees={employees} />,
     },
     {
       path: "/cart",

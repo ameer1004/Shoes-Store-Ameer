@@ -6,7 +6,7 @@
   background-color: purple;
   color: white;
   padding: 16px;
-  font-size: 15px;
+  font-size: 20px;
   border: none;
   cursor: pointer;
 }
@@ -47,4 +47,24 @@
   color: blue;
   display: flex;
   margin-top: 10px;
+}
+@media screen and (max-width: 899px) {
+  .Carticon {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 758px) {
+  .dropbtn {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 585px) {
+  .dropbtn {
+    font-size: 5px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .dropbtn {
+    font-size: 10px;
+  }
 }

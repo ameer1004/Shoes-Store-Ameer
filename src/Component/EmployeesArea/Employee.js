@@ -37,7 +37,7 @@ function Employees({ setEmployees }) {
   const changeImage = (event) => {
     setImage(event.target.value);
   };
-  const transferValue = (event) => {
+  const AddEmployee = (event) => {
     event.preventDefault();
     const employee = {
       fname,
@@ -180,7 +180,7 @@ function Employees({ setEmployees }) {
             value="Add"
             id="Addworkers"
             className="btnform"
-            onClick={transferValue}
+            onClick={AddEmployee}
           >
             Add
           </button>
