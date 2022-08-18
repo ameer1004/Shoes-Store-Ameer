@@ -86,6 +86,14 @@ strong {
     margin-bottom: 140px;
   }
 }
+@media screen and (max-width: 320px) {
+  .container1 {
+    font-size: 5px;
+    height: 1600px;
+    display: flex;
+    margin-bottom: 140px;
+  }
+}
 @media screen and (max-width: 375px) {
   ul li strong {
     font-size: 12px;
@@ -166,5 +174,18 @@ strong {
 @media screen and (max-width: 280px) {
   .table-formshoes td input {
     width: 80px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .btn {
+    font-size: 10px;
+    left: 65%;
+  }
+  form table tr td input {
+    margin-left: -20%;
+    width: 20vw;
+  }
+  form table tr td label {
+    margin-left: -20%;
   }
 }
