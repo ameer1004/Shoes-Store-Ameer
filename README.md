@@ -16,7 +16,7 @@ There are some details about every shoe for example:
 5. cd (The name of the repository).
 6. type a command code .
 
-### Note: This is the link for the Deploy page: <a href="https://react-homework-2.herokuapp.com/" target="_blank">Shoes Store</a>
+### Note: This is the link for the Deploy page: <a href="https://shoes-store-zmnr.onrender.com/" target="_blank">Shoes Store</a>
 
 #### ScreenShot of the page store: 
 ![screenshot](/src/assets/images/project%20screenshot1.jpg)
